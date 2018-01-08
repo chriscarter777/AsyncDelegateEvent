@@ -1,0 +1,33 @@
+﻿@using AsyncAndEvents.Models
+@model HomeModel
+@{
+    ViewBag.Title = "Async & Events";
+}
+
+<div class="jumbotron">
+    <h1>Async and Events</h1>
+</div>
+
+<div>
+    <button id="start">@Html.ActionLink("Start Async Counter", "ReturnWithNumbers")</button>
+</div>
+<div>
+    <p>Your result is:</p>
+    <p>@Model.BooleanData</p>
+    <p>@Model.StringData</p>
+</div>
+
+<div>
+    <button id="start">@Html.ActionLink("Let Delegates Speak", "LetDelegatesSpeak")</button>
+</div>
+<div>
+    <p>Your message is:</p>
+    @Html.TextAreaFor(m => m.DelegateMessage)
+</div>
+
+<div>
+    <button id="start">@Html.ActionLink("Trigger Events", "TriggerEvents")</button>
+</div>
+<div>
+    <p>(See Debug output for event handler output)</p>
+</div>
