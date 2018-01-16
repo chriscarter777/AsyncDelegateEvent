@@ -22,7 +22,25 @@ namespace AsyncAndEvents.Controllers
             return View("Index", model);
         }
 
-        #region Async
+        [HttpGet]
+        public ActionResult FaceOfAsync()
+        {
+            HomeModel model = new HomeModel { StringInput = "tacocat"};
+            return View("FaceOfAsync", model);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> FaceOfAsync(HomeModel model)
+        {
+            Task<string> thisWillBeStringData4 = CallsSubmethodAsync(model.StringInput);
+            model.StringData = CallsSubmethod(model.StringInput);
+            model.StringData2 = CallsSubmethodAsyncResult(model.StringInput);
+            model.StringData3 = CallsSubmethodAsync(model.StringInput).Result;
+            model.StringData4 = await thisWillBeStringData4;
+            return View("FaceOfAsync", model);
+        }
+
+        #region AsyncMethods
         public async Task<ActionResult> ReturnWithNumbers()
         {
             Debug.WriteLine("The controller method is starting.");
@@ -71,6 +89,42 @@ namespace AsyncAndEvents.Controllers
             await Task.Delay(3000);
             return 999;
         }
+        #endregion
+
+        #region FaceOfAsyncMethods
+        public string CallsSubmethod(string submission)
+        {
+            return Submethod(submission);
+        }
+
+        public string CallsSubmethodAsyncResult(string submission)
+        {
+            return SubmethodAsync(submission).Result;
+        }
+
+        public async Task<string> CallsSubmethodAsync(string submission)
+        {
+            Task<string> submissionresponsetask = SubmethodAsync(submission);
+            //The task is set in motion.  Meanwhile, you could do things here.
+            string submissionresponse = await submissionresponsetask;
+            return submissionresponse;
+        }
+
+        public async Task<string> SubmethodAsync(string submission)
+        {
+            char[] submissionarray = submission.ToCharArray();
+            Array.Reverse(submissionarray);
+            return new string(submissionarray);
+        }
+
+        public string Submethod(string submission)
+        {
+            char[] submissionarray = submission.ToCharArray();
+            Array.Reverse(submissionarray);
+            return new string(submissionarray);
+        }
+
+
         #endregion
 
         #region Delegates

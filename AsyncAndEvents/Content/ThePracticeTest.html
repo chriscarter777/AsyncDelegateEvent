@@ -1,0 +1,305 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pangram Typing Practice Drills</title>
+    <meta name="description" content="Pangrams are alphabetical sentences. These practice drills and wpm typing tests ensure you practice the entire alphabet. Over 100 different typing tests and data entry drills to help you improve your typing (wpm) and data entry (kph) test scores.">
+    <meta name="keywords" content="typing alphabetical sentences, typing pangrams, typing holoalphabetic sentences, pangram typing tests, pangram typing practice, pangram drills">
+    <script type="application/ld+json">
+        {"@context": "http://schema.org",   "@type": "Organization", "url": "https://thepracticetest.com", "logo": "https://thepracticetest.com/img/tpt_logo.png" },
+        {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+        "@id": "https://thepracticetest.com/typing/",
+        "name": "Typing",
+        "image": "http://thepracticetest.com/img/tpt_share.png"
+        }
+        },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+        "@id": "https://thepracticetest.com/typing/drills/alphabet/",
+        "name": "Pangrams (Alphabet Drills)",
+        "image": "http://thepracticetest.com/img/tpt_share.png"
+        }
+        }]
+        }
+    </script>
+    <meta name="google-site-verification" content="fKPfIvRew8m25G0Hj58YTghGuVYc0dU_TnTi9wxRJGM" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Special+Elite|Source+Code+Pro" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        footer, footer a {
+            color: rgba(225,225,225,1)
+        }
+
+        .jumbotron, .jumbotron h2 a {
+            box-shadow: 2px 3px 5px rgba(0,0,0,.75)
+        }
+
+        body {
+            background: rgba(0,0,0,.9);
+            background-size: cover
+        }
+
+        ol li {
+            display: inline-block
+        }
+
+        footer {
+            font-size: 1.2em;
+            line-height: 1.5
+        }
+
+            footer a:hover {
+                text-decoration: none;
+                color: #fff
+            }
+
+        .bg-danger {
+            background: rgba(232,201,153,.75);
+            padding: 2px
+        }
+
+        .jumbotron {
+            background: rgba(250,250,250,.95);
+            font-family: Merriweather,serif;
+            margin-top: 5%;
+            padding-top: 20px
+        }
+
+            .jumbotron li, .jumbotron p {
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-size: 1.2em
+            }
+
+                .jumbotron li p a {
+                    font-size: .9em
+                }
+
+                .jumbotron p.prompt {
+                    font-family: 'Source Code Pro',monospace
+                }
+
+            .jumbotron h1, .jumbotron h2 {
+                font-family: 'Special Elite',monospace
+            }
+
+            .jumbotron h1 {
+                font-size: 2.5em;
+                text-shadow: 2px 3px 5px rgba(30,30,30,.75);
+                margin-top: 20px
+            }
+
+            .jumbotron h2 {
+                font-size: 2em;
+                margin-top: 25px;
+                padding-top: 15px;
+                text-shadow: 1px 3px 2px rgba(30,30,30,.75)
+            }
+
+                .jumbotron a, .jumbotron h1 a, .jumbotron h2 a {
+                    padding: 5px;
+                    border-radius: 3px
+                }
+
+            .jumbotron h3 {
+                font-size: 1.5em
+            }
+
+            .jumbotron header {
+                text-align: center
+            }
+
+            .jumbotron h2 a {
+                background: rgba(150,30,15,1);
+                color: rgba(240,240,240,.95)
+            }
+
+            .jumbotron h1 a {
+                background: rgba(0,0,0,0);
+                box-shadow: 2px 3px 5px transparent;
+                color: #000
+            }
+
+            .jumbotron a {
+                color: rgba(150,30,15,1);
+                background: rgba(254,254,254,1);
+                box-shadow: 2px 3px 5px rgba(0,0,0,.2);
+                line-height: 2em
+            }
+
+                .jumbotron a.img-link {
+                    padding: 0
+                }
+
+            .jumbotron h2 a:hover {
+                box-shadow: 1px 1px 2px rgba(0,0,0,.5);
+                color: #fff;
+                text-decoration: none
+            }
+
+            .jumbotron a:hover, .jumbotron h1 a:hover {
+                box-shadow: 1px 1px 2px transparent;
+                text-decoration: none
+            }
+
+            .jumbotron h1 a:hover {
+                color: rgba(150,30,15,1)
+            }
+
+            .jumbotron a:hover {
+                color: rgba(0,0,0,1)
+            }
+
+        .advert {
+            padding-top: 25px;
+            padding-bottom: 20px
+        }
+
+        #wpm {
+            width: 90px
+        }
+
+        .saguaro {
+            color: #DBD8B0;
+            background-color: #616129 !important
+        }
+
+        .error {
+            padding: 2px;
+            color: #fff;
+            background-color: rgba(150,30,15,1) !important
+        }
+
+        .prompt {
+            padding: 5px;
+            color: #999;
+            background-color: #f9f9f9 !important
+        }
+    </style>
+    <script>
+var testText="",myText,ms=new Date,theTime=ms.getTime(),c,t=false,s=0,keys=new Array;function Key(ch,tm){this.character=ch;this.ms=tm}function checkText(id,sid){var text2check=document.getElementById("typing").value;if(text2check.length>testText.length){msPrev=theTime;theTime=ms.getTime();key=new Key(text2check.substring(text2check.length-1),theTime-msPrev);var pattern=new RegExp("[a-z]");if(pattern.test(key.character)){keys.push(key)}}if(document.getElementById("typing").value.length==1){start=Date.now()}var end=Date.now();var w=document.getElementById("typing").value.length/5;var se=(end-start)/1e3;if(se==0){document.getElementById("score").innerHTML="test started... calculating score... keep typing"}else{var currentWPM=wpm(w,se);document.getElementById("score").innerHTML=currentWPM+" wpm ("+document.getElementById("typing").value.length/5+" words in "+showClock(se)+" minutes)"}if(text2check.length-testText.length>3){alert("excessive copy & paste detected");document.getElementById("typing").value=testText}else{testText=text2check;document.getElementById("typed").innerHTML=checkIt(myText,text2check);if(myText==text2check){highScore(document.getElementById("score").innerHTML,1,id);document.getElementById("results").innerHTML="<strong>Last Test: "+document.getElementById("score").innerHTML+"</strong>";keys.sort(function(a,b){return b.ms-a.ms});document.getElementById("results").innerHTML+="<br><strong>weak keys: </strong>";var weakest=new Array;keys.forEach(function(item,index){if(!weakest.includes(item.character)){weakest.push(item.character)}});document.getElementById("results").innerHTML+=getLink(weakest[0])+", ";document.getElementById("results").innerHTML+=getLink(weakest[1])+", ";document.getElementById("results").innerHTML+=getLink(weakest[2])+", ";document.getElementById("results").innerHTML+=getLink(weakest[3]);s=0;nextText(id,sid);document.getElementById("score").innerHTML="Test begins when you start typing...";testLength=0;testText=""}}}function checkRecord(id,sid){var text2check=document.getElementById("typing").value;if(document.getElementById("typing").value.length==1){start=Date.now()}var end=Date.now();var w=document.getElementById("typing").value.length/5;var se=(end-start)/1e3;if(se==0){document.getElementById("score").innerHTML="calculating score"}else{var currentWPM=wpm(w,se);document.getElementById("score").innerHTML=kph(currentWPM).toFixed(0)+" kph ("+document.getElementById("typing").value.length/5+" words in "+showClock(se)+" minutes)"}if(text2check.length-testText.length>3){alert("excessive copy & paste detected");document.getElementById("typing").value=testText}else{testText=text2check;document.getElementById("typed").innerHTML=checkIt(myText,text2check);if(myText==text2check){if(t==true){stopTimer()}highScore(document.getElementById("score").innerHTML,2,id);document.getElementById("results").innerHTML="<strong>Last Timed Results: "+document.getElementById("score").innerHTML+"</strong>";s=0;nextText(id,sid);document.getElementById("score").innerHTML="Test begins when you start typing...";testLength=0;testText=""}}}function nextText(id,sId){document.getElementById("typing").value="";if(window.XMLHttpRequest){xmlhttp=new XMLHttpRequest}else{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")}xmlhttp.onreadystatechange=function(){if(this.readyState==4&&this.status==200){myText=this.responseText;document.getElementById("typed").innerHTML=myText;document.getElementById("info").innerHTML="Test has "+myText.length/5+" words"}};var qStr="test.php?s="+sId+"&&t="+Math.random()+"&&id="+id;xmlhttp.open("GET",qStr,true);xmlhttp.send()}function checkIt(goodText,testText){var checkedText="";var tempText="";var i;var x=0;for(i in testText){if(goodText[i]==testText[i]){checkedText=checkedText+goodText[i]}else{checkedText=checkedText+"<span class='error'>"+goodText[i]+"</span>"}tempText="<span style = 'color:black;'>"+checkedText+"</span>"+goodText.substr(++x)}if(tempText!=""){return tempText}else{return goodText}}function getLink(key){var link="";switch(key){case"A":case"a":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/a/'>"+key+" drills</a>";break;case"B":case"b":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/b/'>"+key+" drills</a>";break;case"C":case"c":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/c/'>"+key+" drills</a>";break;case"D":case"d":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/d/'>"+key+" drills</a>";break;case"E":case"e":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/e/'>"+key+" drills</a>";break;case"F":case"f":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/f/'>"+key+" drills</a>";break;case"G":case"g":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/g/'>"+key+" drills</a>";break;case"H":case"h":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/h/'>"+key+" drills</a>";break;case"I":case"i":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/i/'>"+key+" drills</a>";break;case"J":case"j":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/j/'>"+key+" drills</a>";break;case"K":case"k":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/k/'>"+key+" drills</a>";break;case"L":case"l":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/l/'>"+key+" drills</a>";break;case"M":case"m":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/m/'>"+key+" drills</a>";break;case"N":case"n":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/n/'>"+key+" drills</a>";break;case"O":case"o":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/o/'>"+key+" drills</a>";break;case"P":case"p":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/p/'>"+key+" drills</a>";break;case"Q":case"q":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/q/'>"+key+" drills</a>";break;case"R":case"r":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/r/'>"+key+" drills</a>";break;case"S":case"s":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/s/'>"+key+" drills</a>";break;case"T":case"t":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/t/'>"+key+" drills</a>";break;case"U":case"u":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/u/'>"+key+" drills</a>";break;case"V":case"v":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/v/'>"+key+" drills</a>";break;case"W":case"w":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/w/'>"+key+" drills</a>";break;case"X":case"x":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/x/'>"+key+" drills</a>";break;case"Y":case"y":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/y/'>"+key+" drills</a>";break;case"Z":case"z":link="<strong>"+key+"</strong> <a href='https://thepracticetest.com/typing/drills/alphabet/z/'>"+key+" drills</a>";break;default:link="<strong>"+key+"</strong>";break}return link}function highScore(str,t,id){var n="guest";var msgArray=str.split(" ");var score=msgArray[0];var testType=msgArray[1].trim();if(score>220&&testType=="WPM"||score>66e3&&testType=="KPH"){alert("You just broke a world record... or you are cheating. :(")}else{n=prompt("Enter your name to record your score: "+score+" "+testType,"guest");if(window.XMLHttpRequest){xmlhttp=new XMLHttpRequest}else{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")}xmlhttp.onreadystatechange=function(){if(this.readyState==4&&this.status==200){}};xmlhttp.open("GET","/inc/savescore.php?score="+score+"&name="+n+"&type="+t+"&test="+id,true);xmlhttp.send();displayHS(testType,id)}}function displayHS(st,id){if(window.XMLHttpRequest){xmlhttp=new XMLHttpRequest}else{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")}xmlhttp.onreadystatechange=function(){if(this.readyState==4&&this.status==200){var scoreText=this.responseText;var scores=scoreText.split(";");document.getElementById("th1").innerHTML=scores[15]+" ("+scores[10]+" "+st+")";document.getElementById("th2").innerHTML=scores[16]+" ("+scores[11]+" "+st+")";document.getElementById("th3").innerHTML=scores[17]+" ("+scores[12]+" "+st+")";document.getElementById("th4").innerHTML=scores[18]+" ("+scores[13]+" "+st+")";document.getElementById("th5").innerHTML=scores[19]+" ("+scores[14]+" "+st+")";document.getElementById("ah1").innerHTML=scores[5]+" ("+scores[0]+" "+st+")";document.getElementById("ah2").innerHTML=scores[6]+" ("+scores[1]+" "+st+")";document.getElementById("ah3").innerHTML=scores[7]+" ("+scores[2]+" "+st+")";document.getElementById("ah4").innerHTML=scores[8]+" ("+scores[3]+" "+st+")";document.getElementById("ah5").innerHTML=scores[9]+" ("+scores[4]+" "+st+")"}};xmlhttp.open("GET","/inc/showScores.php?t="+Math.random()+"&&id="+id,true);xmlhttp.send()}var start=null;function getKPH(){var speed=parseInt(document.getElementById("wpm").value);document.getElementById("kph").innerHTML=speed*300}function checkSpeed(){if(document.getElementById("typing").value.length==1){start=Date.now()}var end=Date.now();var elapsed=(end-start)/1e3;var words=document.getElementById("typing").value.length/5;var cWpm=wpm(words,elapsed);var cKph=kph(cWpm);var clock=showClock(elapsed);document.getElementById("score").innerHTML=words.toFixed(1)+" words in "+clock+" minutes... "+cWpm+" wpm / "+cKph+" kph"}function wpm(words,elapsed){var value=words/(elapsed/60);return value.toFixed(1)}function kph(wpm){return wpm*300}function showClock(elapsed){var minutes=elapsed/60;var seconds=elapsed%60;if(parseInt(seconds)<10){seconds2show="0"+parseInt(seconds)}else{seconds2show=parseInt(seconds)}return parseInt(minutes)+":"+seconds2show}function randomNumber(n1,n2){n2=n2-n1;var n=Math.floor(Math.random()*n2)+n1;return n}function randomCharacter(possible){var c=possible.charAt(Math.floor(Math.random()*possible.length));return c}
+    </script>
+</head>
+
+<body>
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style pull-right"> <a class="a2a_button_facebook"></a> <a class="a2a_button_google_plus"></a> <a class="a2a_button_linkedin"></a> <a class="a2a_button_reddit"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_stumbleupon"></a> <a class="a2a_dd" href="https://www.addtoany.com/share"></a> <a href="https://www.patreon.com/karenfreemansmith"><button class='btn btn-danger'>BECOME A PATRON</button></a> </div>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16529910-26"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-16529910-34');
+    </script>
+    <div class="container">
+        <div class="jumbotron">
+            <header> <h1> <a href="http://thepracticetest.com/typing/">TYPING PRACTICE</a> ~ <a href="http://thepracticetest.com/dataentry/">DATA ENTRY</a> ~ <a href="http://thepracticetest.com/keyboarding/">TYPING LESSONS</a> </h1> <a href="https://thepracticetest.com/" class='img-link'><img src='https://thepracticetest.com/img/tpt_header1.png' alt='header logo, link to home page' class='img-responsive'></a> </header>
+            <h1 class='text-center'>Pangram Typing Practice Drills</h1>
+            <div class="row">
+                <p>
+                    <a href="https://thepracticetest.com/typing/">Typing</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/">Alphabet Drills</a>
+                </p><p>Pangrams (or holoalphabetic sentences) are sentences that contain every letter of the alphabet. Practice typing pangrams can help you work on your speed and accuracy for less common letters like 'q' or 'z'. A pangram typing test is a good typing test to discover your weakest keys. When you finish the test you will get links to typing drills that can help you improve those weak keys.</p>
+                <h4>Letter Drills:</h4>
+                <p class="text-center">
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/a/">A</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/b/">B</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/c/">C</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/d/">D</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/e/">E</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/f/">F</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/g/">G</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/h/">H</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/i/">I</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/j/">J</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/k/">K</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/l/">L</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/m/">M</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/n/">N</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/o/">O</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/p/">P</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/q/">Q</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/r/">R</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/s/">S</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/t/">T</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/u/">U</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/v/">V</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/w/">W</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/x/">X</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/y/">Y</a> |
+                    <a href="https://thepracticetest.com/typing/drills/alphabet/z/">Z</a>
+                </p>
+                <div class='col-sm-6'><h3>Recent Scores</h3><ul><li id='th1'></li><li id='th2'></li><li id='th3'></li><li id='th4'></li><li id='th5'></li></ul></div><div class='col-sm-6'><h3>Top Scores</h3><ul><li id='ah1'></li><li id='ah2'></li><li id='ah3'></li><li id='ah4'></li><li id='ah5'></li></ul></div>
+            </div>        <div class='advert'>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- 2018_ResponsiveTPT -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6551006166746568"
+                     data-ad-slot="2071743810"
+                     data-ad-format="auto"></ins>
+                <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="row">
+                <div class='col-sm-6'><h3><span id='info'>Type this...</span><button onClick="nextText(41, 'f2014f5da644479607984c2bf975f2ed')" class="btn error pull-right">CHANGE TEST</button></h3><p id='typed' class='prompt'>Loading...</p></div><div class='col-sm-6'><h3 id='score'>Test begins when you start typing...</h3><textarea id='typing' class="form-control" rows="12" spellcheck='false' onKeyUp="checkText(41, 'f2014f5da644479607984c2bf975f2ed');"></textarea><p id='results' class='error'></p></div>
+            </div><h3>More Typing Drills:</h3>
+            <p class="text-center">
+                <a href="https://thepracticetest.com/typing/drills/numbers/">Numbers</a> |
+                <a href="https://thepracticetest.com/typing/drills/symbols/">Symbols</a> |
+                <a href="https://thepracticetest.com/typing/drills/common/">Common Words</a> |
+                <a href="https://thepracticetest.com/typing/drills/spelling/">Misspelled Words</a> |
+                <a href="https://thepracticetest.com/typing/drills/business/">Business</a> |
+                <a href="https://thepracticetest.com/typing/drills/medical/">Medical</a> |
+                <a href="https://thepracticetest.com/typing/drills/tech/">Technical</a> |
+                <a href="https://thepracticetest.com/typing/drills/programming/">Programming</a>
+            </p>
+            <script>displayHS('wpm', 41); nextText(41, 'f2014f5da644479607984c2bf975f2ed');</script><div class="row">
+                <div class="col-sm-8">
+                    <h3>How to Use This Practice Typing Test</h3>
+
+                    <p>Fast, accurate typing is an essential skill for many jobs. The practice tests on this website were designed to help adult job-seekers develop their typing skills. </p>
+
+                    <p>After the page loads completely, type the text you see in the box. Scoring starts when you start typing. Untyped text will appear <span class='prompt'>greyed out</span> and turn black as you type it.  Errors are shown in <span class='error'>red</span>. When you complete the text, you will see a final score along with your weak keys and links to drills to improve those keys. Many of our tests have a trailing space at the end of the test, which may make it appear as if you have finished with no errors, but not give you a final score. If you don't see your errors displayed, then please let us know so we can fix the page!</p>
+
+                    <p>Most typing courses recommend focusing on your accuracy over speed. Because of this, we chose to require 100% accuracy to complete a test. Speed will come with practice. You can use the backspace key to correct as you go, or correct your errors after you finish just like you would on the job. It is intended to give you a more accurate idea of how fast you type in a work setting where errors must be corrected.</p>
+
+                    <p>Occasionally, you may get a symbol that is not present on your keyboard. This happens frequently on the typing exercises for languages other than English. It is assumed that those practicing these languages have a keyboard with those characters, or are familiar with how to type the special characters of that language. The only way to type a key not present in your keyboard layout is using the numeric pad with the ALT key + the code for that character.</p>
+
+                    <p>Once in a while a special character will be overlooked in the text for typing exercises (such as the hyphen or quotes which are often 'autocorrected by word processing software). If you run into one of these characters while taking one of our tying tests, please let us know by sending an email with a copy of the passage you are typing and the exercise you found it on to karen@thepracticetest.com so that we can fix the text.</p>
+
+                    <p>In the meantime, if you encounter one of these characters you can either copy and paste (one or two characters at a time) or refresh the page to get a different test to type.</p>
+
+                    <p>Sometimes our tests break. This is usually caused by the high score data becoming corrupted. If you encounter a test that does not load, please drop us a line at karen@thepracticetest.com so we can reset the test scores and get the test back up as soon as possible.</p>
+                </div>
+                <div class="col-sm-4 advert">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- 2018_SkyscraperTPT -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:300px;height:600px"
+                         data-ad-client="ca-pub-6551006166746568"
+                         data-ad-slot="7514221306"></ins>
+                    <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div> <div class='row'> <div class='col-sm-12 text-center'><br><br> <h4>Find a mistake? Is a test not working? Have a suggestion for another typing test topic? Let us know!</h4> <h4>Please email: <a href="mailto://karen@thepracticetest.com">karen@thepracticetest.com</a> with any comments or concerns about The Practice Test.</h4> </div> </div>
+        </div> <footer class="text-center"> <p> <a href="/about.php">ABOUT</a> | <a href="/faq.php">FAQ</a> | <a href="/terms.php">TERMS & CONDITIONS</a> | <a href="/privacy.php">PRIVACY POLICY</a> | <a href="/help.php">HELP</a> </p> Copyright &copy; 2011-2018. ThePracticeTest.com <img src="https://thepracticetest.com/img/tpt_share.png" alt="practice test share image" style="height:1px; width:1px; display:block;"></footer>
+    </div>
+</body>
+</html>

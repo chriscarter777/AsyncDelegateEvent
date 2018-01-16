@@ -38,13 +38,10 @@ namespace AsyncAndEvents.Models
             }
         }  //Count
 
-        // Wrap event invocations inside a protected virtual method
-        // to allow derived classes to override the event invocation behavior
+        // Wrap event invocations inside a protected virtual method to allow derived classes to override the invocation behavior
         protected virtual void RaiseGeneralEvent(CustomEventArgs e)
         {
-            // Make a temporary copy of the event to avoid possibility of
-            // a race condition if the last subscriber unsubscribes
-            // immediately after the null check and before the event is raised.
+            // Use a copy of the event, to avoid a race condition if the last subscriber unsubscribes between null check and raise.
             CustomEventHandler handler = GeneralEventHandler;
 
             // Event will be null if there are no subscribers
